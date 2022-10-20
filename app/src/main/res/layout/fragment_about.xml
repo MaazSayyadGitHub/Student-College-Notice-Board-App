@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.about.AboutFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:scaleType="fitXY"
+            android:id="@+id/aboutImage"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/About_College"
+            android:layout_marginTop="@dimen/text_margin"
+            android:layout_marginHorizontal="@dimen/text_margin"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/text_size"
+            android:textColor="@color/textColor"
+            android:fontFamily="@font/abel"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/text_size"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_label"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/text_margin"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Green College Campus"
+                android:layout_marginLeft="@dimen/text_margin"
+                android:textSize="@dimen/text_size"
+                android:fontFamily="@font/aldrich"
+                android:layout_gravity="center_vertical"
+                android:textColor="#7A1A1A"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_label"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/text_margin"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Neat and Clean Class Rooms"
+                android:layout_marginLeft="@dimen/text_margin"
+                android:textSize="@dimen/text_size"
+                android:fontFamily="@font/aldrich"
+                android:layout_gravity="center_vertical"
+                android:textColor="#7A1A1A"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_label"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/text_margin"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Library"
+                android:layout_marginLeft="@dimen/text_margin"
+                android:textSize="@dimen/text_size"
+                android:fontFamily="@font/aldrich"
+                android:layout_gravity="center_vertical"
+                android:textColor="#7A1A1A"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_label"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/text_margin"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lab and WorkShop"
+                android:layout_marginLeft="@dimen/text_margin"
+                android:textSize="@dimen/text_size"
+                android:fontFamily="@font/aldrich"
+                android:layout_gravity="center_vertical"
+                android:textColor="#7A1A1A"/>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Branches"
+            android:layout_marginTop="36dp"
+            android:textSize="@dimen/title_size"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/textColor"
+            android:fontFamily="@font/aldrich"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_forward"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/darkGrayLight"
+            android:layout_marginTop="5dp"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_marginTop="@dimen/text_margin"
+            android:foregroundGravity="center"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:id="@+id/viewPager"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/text_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact Details"
+                android:layout_marginTop="16dp"
+                android:textSize="@dimen/title_size"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/textColor"
+                android:fontFamily="@font/aldrich"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PIRENS' Institute of Computer Technology"
+                android:layout_marginTop="@dimen/text_margin"
+                android:layout_marginHorizontal="@dimen/text_margin"
+                android:textSize="@dimen/text_size1"
+                android:textColor="@color/textColor"
+                android:fontFamily="@font/acme"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="	A/p- Loni Bk Ta: Rahta Dist: Ahmednagar Pincode: 413736"
+                android:layout_marginTop="@dimen/text_margin"
+                android:layout_marginHorizontal="@dimen/text_margin"
+                android:textSize="@dimen/text_size1"
+                android:textColor="@color/textColor"
+                android:fontFamily="@font/acme"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="02422273493"
+                android:layout_marginTop="@dimen/text_margin"
+                android:layout_marginHorizontal="@dimen/text_margin"
+                android:textSize="@dimen/text_size1"
+                android:textColor="@color/textColor"
+                android:fontFamily="@font/acme"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="	directorptc@yahoo.com"
+                android:layout_marginTop="@dimen/text_margin"
+                android:layout_marginHorizontal="@dimen/text_margin"
+                android:textSize="@dimen/text_size1"
+                android:textColor="@color/textColor"
+                android:fontFamily="@font/acme"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See In Map"
+                android:layout_marginTop="20dp"
+                android:textSize="@dimen/title_size"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/textColor"
+                android:fontFamily="@font/aldrich"/>
+
+            <ImageView
+                android:id="@+id/map"
+                android:layout_width="wrap_content"
+                android:layout_height="230dp"
+                android:src="@drawable/googlemapimg"
+                android:layout_marginTop="10dp"/>
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>
