@@ -20,6 +20,19 @@ import com.maaz.collegeapp.EBooks.EBookActivity;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+
+    /* Pushing Or Enabling Project with Github :-
+
+     first Goto Project section
+     and then go to Git
+     then do first add+ to VCS
+     then after commit directory
+     then after that do push
+     for push add repository url
+     and then push it.
+
+     */
+
     private BottomNavigationView bottomNavigationView;
     private NavController navController;
 
@@ -52,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     // this is for toggle click... toggle is three line on navigation Drawer.
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (toggle.onOptionsItemSelected(item)){
+        if (toggle.onOptionsItemSelected(item)) {
             return true;
         }
         return true;
@@ -60,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.navigation_dev:
                 Toast.makeText(this, "Developer", Toast.LENGTH_SHORT).show();
                 break;
@@ -92,7 +105,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void onBackPressed() {
         // it is for , if navigation drawer is open then onBacPress first Navigation Drawer will Close
         // then App will Close
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)){
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed(); // super is used for methods Functionality.
@@ -101,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     //it is for fragment action bar. we will get this getSupportActionBar and access in fragment.
-    public void setActionBarTitle(String title){
+    public void setActionBarTitle(String title) {
         getSupportActionBar().setTitle(title);
     }
 }
