@@ -43,6 +43,7 @@ public class NoticeAdapter extends RecyclerView.Adapter<NoticeAdapter.NoticeView
     public void onBindViewHolder(@NonNull NoticeViewAdapter holder, int position) {
 
         NoticeData item = list.get(position);
+
         holder.NoticeTitle.setText(item.getTitle());
         holder.date.setText(item.getDate());
         holder.time.setText(item.getTime());

@@ -1,5 +1,6 @@
 package com.maaz.collegeapp.UI.notice;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -26,30 +27,31 @@ import java.util.ArrayList;
 
 public class NoticeFragment extends Fragment {
 
-    private RecyclerView deleteNoticeRecyclerView;
+    private RecyclerView NoticeRecyclerView;
     private ProgressBar progressBar;
     private ArrayList<NoticeData> list;
     private NoticeAdapter adapter;
 
     private DatabaseReference reference;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_notice, container, false);
 
-        // this is for ActionBar Name.
+        // this is for ActionBar Name for Each Fragment.
         ((MainActivity) getActivity())
                 .setActionBarTitle("College Notice");
 
-        deleteNoticeRecyclerView = view.findViewById(R.id.deleteNoticeRecyclerView);
+        NoticeRecyclerView = view.findViewById(R.id.NoticeRecyclerView);
         progressBar =view.findViewById(R.id.progressBar);
 
         reference = FirebaseDatabase.getInstance().getReference().child("Notice");
 
-        deleteNoticeRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        deleteNoticeRecyclerView.setHasFixedSize(true);
+        NoticeRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        NoticeRecyclerView.setHasFixedSize(true);
 
         getNotice();
 
@@ -61,7 +63,8 @@ public class NoticeFragment extends Fragment {
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                list = new ArrayList<>();  // add data into list.
+                list = new ArrayList<>();  // initialize list.
+
                 for (DataSnapshot snapshot1 : snapshot.getChildren()){
                     NoticeData data = snapshot1.getValue(NoticeData.class);
                     list.add(0,data);  // Whatever New Data will come in Notice Activity will be on (First) Top.
@@ -69,8 +72,9 @@ public class NoticeFragment extends Fragment {
 
                 adapter = new NoticeAdapter(getContext(), list);
                 adapter.notifyDataSetChanged();
+
                 progressBar.setVisibility(View.GONE);
-                deleteNoticeRecyclerView.setAdapter(adapter);
+                NoticeRecyclerView.setAdapter(adapter);
             }
 
             @Override

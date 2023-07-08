@@ -58,6 +58,7 @@
                         android:text="12/02/2021"
                         android:fontFamily="@font/abel"
                         android:textSize="@dimen/text_size01"
+                        android:textStyle="bold"
                         android:textColor="@color/textColor"/>
 
                     <TextView
@@ -75,6 +76,7 @@
                         android:layout_height="wrap_content"
                         android:text="12:00"
                         android:fontFamily="@font/abel"
+                        android:textStyle="bold"
                         android:textSize="@dimen/text_size01"
                         android:textColor="@color/textColor"/>
 
@@ -90,8 +92,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:text="GGFSHGfhgs jhsgfh uiau siau agdag kajdhskah kjhsdakjs ashdj jhsd dd jsddd."
+            android:text="GGFSHGfhgs jhsgfh uiau siau agdag wefkjf kajdhskah kjhsdakjs ashdj jhsd dd jsddd."
             android:textSize="17sp"
+            android:ellipsize="end"
+            android:maxLines="2"
             android:layout_marginVertical="@dimen/text_margin"
             android:fontFamily="@font/aldrich"
             android:textColor="@color/textColor"/>

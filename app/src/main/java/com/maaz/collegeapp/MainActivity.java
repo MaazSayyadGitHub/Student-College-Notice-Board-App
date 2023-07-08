@@ -51,11 +51,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         // Navigation Drawer Toggle
         toggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.start, R.string.close);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        drawerLayout.addDrawerListener(toggle); // set that toggle to drawer layout
+        toggle.syncState(); // it will check that if (nav view is open then it will show close btn other wise open btn)
 
-        navigationView.setNavigationItemSelectedListener(this);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); // set back btn
+
+        // navigation drawer
+        navigationView.setNavigationItemSelectedListener(this); // we already implemented NavigationView.OnNavigationItemSelectedListener to this class
 
         // bottom navigation
         navController = Navigation.findNavController(this, R.id.frame_layout);
@@ -87,7 +89,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 // it will take to EBook Activity.
                 startActivity(new Intent(this, EBookActivity.class));
                 break;
-
             case R.id.navigation_theme:
                 Toast.makeText(this, "Theme", Toast.LENGTH_SHORT).show();
                 break;

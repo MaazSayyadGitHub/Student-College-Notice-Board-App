@@ -38,8 +38,8 @@ public class HomeFragment extends Fragment {
 
         map  = view.findViewById(R.id.map);
         sliderLayout = view.findViewById(R.id.slider);
-        sliderLayout.setIndicatorAnimation(IndicatorAnimations.FILL);
-        sliderLayout.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
+        sliderLayout.setIndicatorAnimation(IndicatorAnimations.WORM);
+        sliderLayout.setSliderTransformAnimation(SliderAnimations.FANTRANSFORMATION);
         sliderLayout.setScrollTimeInSec(2);
 
         setSliderimages();
@@ -53,7 +53,6 @@ public class HomeFragment extends Fragment {
 
 
         return view;
-
     }
 
     private void openMap(){
