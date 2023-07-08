@@ -24,7 +24,6 @@ public class TeacherAdapters extends RecyclerView.Adapter<TeacherAdapters.Teache
     private List<TeacherData> list;
     private Context context;
 
-
     public TeacherAdapters(List<TeacherData> list, Context context) {
         this.list = list;
         this.context = context;
@@ -43,6 +42,7 @@ public class TeacherAdapters extends RecyclerView.Adapter<TeacherAdapters.Teache
     public void onBindViewHolder(@NonNull TeacherViewHolder holder, int position) {
 
         TeacherData item = list.get(position);
+
         holder.name.setText(item.getName());
         holder.email.setText(item.getEmail());
         holder.post.setText(item.getPost());

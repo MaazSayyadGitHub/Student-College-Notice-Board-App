@@ -1,5 +1,6 @@
 package com.maaz.collegeapp.UI.gallery;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -28,11 +29,12 @@ import java.util.List;
 public class GalleryFragment extends Fragment {
 
 
-    private RecyclerView convoRecyclerView , otherRecyclerView;
+    private RecyclerView convoRecyclerView, independenceRecyclerView, otherRecyclerView;
     galleryAdapter adapter;
 
     DatabaseReference reference;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -44,25 +46,29 @@ public class GalleryFragment extends Fragment {
                 .setActionBarTitle("College Gallery");
 
         convoRecyclerView = view.findViewById(R.id.convocationRecyclerView);
+        independenceRecyclerView = view.findViewById(R.id.independenceRecyclerView);
         otherRecyclerView = view.findViewById(R.id.othersRecyclerView);
 
         reference = FirebaseDatabase.getInstance().getReference().child("gallery");
 
-        getConvoImages();  // convocation Category images.
+        getConvocationImages();  // convocation Category images.
+
+        getIndependenceImages(); // Independence Day Images
 
         getOtherImages(); // Other Category images.
 
         return view;
     }
 
-    private void getConvoImages() {
-
+    private void getConvocationImages() {
         reference.child("Convocation").addValueEventListener(new ValueEventListener() {
 
+            // initializing String Type List
             List<String> convoImagelist = new ArrayList<>();   // all data will come into this.
+
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot snapshot: dataSnapshot.getChildren()){   /// then it will be access by for loop like this..
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {   /// then it will be access by for loop like this..
 
                     String data = (String) snapshot.getValue();      /// then collect all data in data variable.
                     convoImagelist.add(data);                         // and then add.
@@ -81,15 +87,43 @@ public class GalleryFragment extends Fragment {
         });
     }
 
+    private void getIndependenceImages(){
+        reference.child("Independence Day").addValueEventListener(new ValueEventListener() {
+
+            // initializing String Type List
+            List<String> IndependenceImagelist = new ArrayList<>();   // all data will come into this.
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {   /// then it will be access by for loop like this..
+
+                    String data = (String) snapshot.getValue();      /// then collect all data in data variable.
+                    IndependenceImagelist.add(data);                         // and then add.
+                }
+
+                adapter = new galleryAdapter(getContext(), IndependenceImagelist);
+                convoRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), 3));
+                convoRecyclerView.setAdapter(adapter);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+                Toast.makeText(getContext(), error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
     private void getOtherImages() {
 
         reference.child("Other Events").addValueEventListener(new ValueEventListener() {
 
+            // initialize String type List
             List<String> otherImagelist = new ArrayList<>();
+
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot snapshot: dataSnapshot.getChildren()){
-
                     String data = (String) snapshot.getValue();
                     otherImagelist.add(data);
                 }

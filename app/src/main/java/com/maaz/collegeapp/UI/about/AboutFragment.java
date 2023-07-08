@@ -34,10 +34,13 @@ public class AboutFragment extends Fragment {
         ((MainActivity) getActivity())
                 .setActionBarTitle("About College");
 
-        list = new ArrayList<>();
+        list = new ArrayList<>(); // initialize List here
+
+        // adding ViewPager Data Manually
 
         list.add(new BranchModel(R.drawable.ic_computer, "Computer Science", "Computer Science and Engineering started in year 2015,Computer Science and Engineering started in year 2015,Computer Science and Engineering started in year 2015 ...."));
         list.add(new BranchModel(R.drawable.ic_mechanical, "Mechanical Production", "Mechanical Production and Engineering started in year 2015. Computer Science and Engineering started in year 2015,Computer Science and Engineering started in year 2015..."));
+        list.add(new BranchModel(R.drawable.ic_mechanical, "Physics & Chem", "Physics Production and Engineering started in year 2015. Computer Science and Engineering started in year 2015,Computer Science and Engineering started in year 2015..."));
 
         adapter = new branchAdapter(getContext(), list);
 
@@ -45,12 +48,12 @@ public class AboutFragment extends Fragment {
         viewPager.setAdapter(adapter);
 
         ImageView imageView = view.findViewById(R.id.aboutImage);
+
         Glide.with(getContext())
                 .load("https://firebasestorage.googleapis.com/v0/b/my-college-app-7cf4e.appspot.com/o/sliderImages%2Fcollege1.jpg?alt=media&token=21ce21fe-b60e-431b-8b85-5174cf7159e1")
                 .into(imageView);
 
         return view;
     }
-
 
 }

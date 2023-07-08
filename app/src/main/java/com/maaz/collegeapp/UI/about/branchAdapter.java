@@ -38,6 +38,8 @@ public class branchAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
 
+        // Add All Data Here into Views
+
         View view = LayoutInflater.from(context).inflate(R.layout.branch_item_layout, container , false);
         ImageView brIcon;
         TextView brTitle, brDesc;
@@ -57,7 +59,7 @@ public class branchAdapter extends PagerAdapter {
 
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
+        // Remove Data From View.
         container.removeView((View) object);
-
     }
 }

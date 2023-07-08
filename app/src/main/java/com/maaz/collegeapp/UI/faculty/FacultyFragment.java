@@ -85,10 +85,10 @@ public class FacultyFragment extends Fragment {
                         TeacherData data = snapshot1.getValue(TeacherData.class);
                         list1.add(data);
                     }
-                    csDepartment.setHasFixedSize(true);     // adapter set
+                    csDepartment.setHasFixedSize(true);
                     csDepartment.setLayoutManager(new LinearLayoutManager(getContext()));
                     adapters = new TeacherAdapters(list1, getContext());  // this extra category for access
-                    csDepartment.setAdapter(adapters);                                                      // category in update teacher data.
+                    csDepartment.setAdapter(adapters);                    // category in update teacher data.
                 }
             }
 

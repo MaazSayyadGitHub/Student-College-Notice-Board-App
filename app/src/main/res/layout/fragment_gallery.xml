@@ -67,6 +67,43 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="@dimen/text_margin"
                     android:fontFamily="@font/aldrich"
+                    android:text="Independence Day"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/title_size" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginVertical="2dp"
+                    android:background="@color/grey" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/independenceRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_marginVertical="8dp"
+            android:backgroundTint="#E3E4E3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/text_margin"
+                    android:fontFamily="@font/aldrich"
                     android:text="Others"
                     android:textColor="@color/textColor"
                     android:textSize="@dimen/title_size" />
@@ -86,6 +123,7 @@
 
 
         </com.google.android.material.card.MaterialCardView>
+
     </LinearLayout>
 
 
