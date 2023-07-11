@@ -10,6 +10,7 @@ import com.github.chrisbanes.photoview.PhotoView;
 public class ZoomImageView extends AppCompatActivity {
 
     private PhotoView photoView; // instead of ImageView used photoView.
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,7 +18,7 @@ public class ZoomImageView extends AppCompatActivity {
 
         photoView = findViewById(R.id.imageView);
 
-        String image = getIntent().getStringExtra("image"); // get image
+        String image = getIntent().getStringExtra("image"); // get image from Notice Adapter
 
         Glide.with(this).load(image).into(photoView); // used glide for load image in zoom Activity.
 
