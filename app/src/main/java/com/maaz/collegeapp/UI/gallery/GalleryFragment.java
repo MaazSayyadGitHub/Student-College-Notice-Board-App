@@ -30,6 +30,9 @@ public class GalleryFragment extends Fragment {
 
 
     private RecyclerView convoRecyclerView, independenceRecyclerView, otherRecyclerView;
+
+    List<String> IndependenceImagelist;
+
     galleryAdapter adapter;
 
     DatabaseReference reference;
@@ -68,6 +71,8 @@ public class GalleryFragment extends Fragment {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                convoImagelist.clear(); // clear image for not fetch  duplicate data.
+
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {   /// then it will be access by for loop like this..
 
                     String data = (String) snapshot.getValue();      /// then collect all data in data variable.
@@ -95,6 +100,8 @@ public class GalleryFragment extends Fragment {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                IndependenceImagelist.clear(); // clear image for not fetch duplicate data.
+
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {   /// then it will be access by for loop like this..
 
                     String data = (String) snapshot.getValue();      /// then collect all data in data variable.
@@ -102,8 +109,8 @@ public class GalleryFragment extends Fragment {
                 }
 
                 adapter = new galleryAdapter(getContext(), IndependenceImagelist);
-                convoRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), 3));
-                convoRecyclerView.setAdapter(adapter);
+                independenceRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), 3));
+                independenceRecyclerView.setAdapter(adapter);
             }
 
             @Override
@@ -123,6 +130,8 @@ public class GalleryFragment extends Fragment {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                otherImagelist.clear(); // clear image for not fetch duplicate data.
+
                 for (DataSnapshot snapshot: dataSnapshot.getChildren()){
                     String data = (String) snapshot.getValue();
                     otherImagelist.add(data);
