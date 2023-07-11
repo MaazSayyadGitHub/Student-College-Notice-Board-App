@@ -35,17 +35,19 @@ public class PdfViewerActivity extends AppCompatActivity {
     }
 
     // AsyncTask is like background thread, it runs in background for download the pdf.
+    // then after download we will show in PdfViewer.
     private class pdfDownload extends AsyncTask<String, Void, InputStream>{
 
-        // it will run in background .
+        // it will run in background.
         @Override
-        protected InputStream doInBackground(String... strings) {
+        protected InputStream doInBackground(String... strings) { // this strings is url
             InputStream inputStream = null;
 
             try {
                 // this strings is basically above url.
                 URL url = new URL(strings[0]);
 
+                // making connection
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
 
                 if (httpURLConnection.getResponseCode() == 200){
@@ -62,7 +64,7 @@ public class PdfViewerActivity extends AppCompatActivity {
         // it will show result on Ui. after execute doInBackground.
         @Override
         protected void onPostExecute(InputStream inputStream) {
-            // it will load pdf from inputStream.
+            // it will load pdf from inputStream after downloading.
             pdfView.fromStream(inputStream).load();
         }
     }

@@ -52,7 +52,7 @@ public class branchAdapter extends PagerAdapter {
         brTitle.setText(list.get(position).getTitle());
         brDesc.setText(list.get(position).getDescription());
 
-        container.addView(view, 0);
+        container.addView(view, 0); // 0th index item will be Display
 
         return view;
     }

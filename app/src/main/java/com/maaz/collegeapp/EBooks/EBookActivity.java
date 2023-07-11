@@ -44,11 +44,11 @@ public class EBookActivity extends AppCompatActivity {
         shimmerLayout = findViewById(R.id.shimmerLayout);
 
         EBookRecyclerView = findViewById(R.id.EBookRecyclerView);
+
         reference = FirebaseDatabase.getInstance().getReference().child("pdf");
 
+        // get All Pdf
         getData();
-
-
     }
 
     private void getData() {
@@ -60,7 +60,7 @@ public class EBookActivity extends AppCompatActivity {
                 list = new ArrayList<>();
                 // it will take one by one and display by the help of for loop.
                 for (DataSnapshot snapshot1: snapshot.getChildren()){
-                    // snapshot match with EBookData attributes.
+                    // snapshot convert with EBookData attributes and will be put in data.
                     EBookData data = snapshot1.getValue(EBookData.class);
                     list.add(data);  // and then add to list.
                 }
@@ -83,6 +83,8 @@ public class EBookActivity extends AppCompatActivity {
             }
         });
     }
+
+    // we are starting shimmer layout in Resume Mode and Stopping in Pause Mode.
 
     @Override
     protected void onPause() {   // it is not mandatory

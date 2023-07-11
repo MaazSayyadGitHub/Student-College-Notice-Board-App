@@ -39,7 +39,8 @@ public class EBookAdapter extends RecyclerView.Adapter<EBookAdapter.EBookViewHol
 
         holder.eBookName.setText(list.get(position).getPdfTitle());
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() { // for every position.
+        // for each position.
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // it will open pdf in Pdf Viewer Activity
