@@ -25,6 +25,10 @@
         android:title="Rating"
         android:icon="@drawable/ic_rate"/>
 
+    <item android:id="@+id/navigation_color"
+        android:title="Color Theme"
+        android:icon="@drawable/ic_color"/>
+
     <item android:id="@+id/navigation_dev"
         android:title="Developer"
         android:icon="@drawable/ic_dev"/>

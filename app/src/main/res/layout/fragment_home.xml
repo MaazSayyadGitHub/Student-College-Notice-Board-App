@@ -86,7 +86,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="#fff"
+                            android:background="@color/grey1"
                             android:orientation="vertical">
 
                             <TextView

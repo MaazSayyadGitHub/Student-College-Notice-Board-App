@@ -6,6 +6,11 @@
     <string name="start">Start</string>
     <string name="close">Close</string>
 
-
     <string name="About_College">We believe that young people learn best when they have structure as well as space and time to foster creativity – time to think and grow. We think that learning should be inspirational, challenging and fun. We work hard to nurture our students’ unique gifts and needs within a supportive College community. Our teachers are dynamic educators.</string>
+
+    <string-array name="Theme">
+        <item>System Default</item>
+        <item>Dark</item>
+        <item>Light</item>
+    </string-array>
 </resources>

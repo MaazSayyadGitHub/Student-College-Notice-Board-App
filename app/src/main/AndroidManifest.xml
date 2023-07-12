@@ -12,7 +12,7 @@
         <activity android:name=".ZoomImageView"></activity>
         <activity android:name=".EBooks.PdfViewerActivity" />
         <activity android:name=".EBooks.EBookActivity"
-            android:parentActivityName=".MainActivity"/> // it is for after back from Ebook Activity.
+            android:parentActivityName=".MainActivity"/>  <!-- if i will press back from Ebook Activity, i will be return to MainActivity -->
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

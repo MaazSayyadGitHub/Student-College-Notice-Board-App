@@ -55,7 +55,6 @@
 
         </LinearLayout>
 
-        ...(your complex view here)...
     </com.facebook.shimmer.ShimmerFrameLayout>
 
 
