@@ -4,7 +4,7 @@
     app:cardCornerRadius="16dp"
     app:cardElevation="2dp"
     android:layout_margin="8dp"
-    android:backgroundTint="#CBCDCB"
+    android:backgroundTint="@color/branchColor"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 

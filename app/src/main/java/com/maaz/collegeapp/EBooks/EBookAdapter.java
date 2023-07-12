@@ -1,5 +1,6 @@
 package com.maaz.collegeapp.EBooks;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -35,7 +36,7 @@ public class EBookAdapter extends RecyclerView.Adapter<EBookAdapter.EBookViewHol
     }
 
     @Override
-    public void onBindViewHolder(@NonNull EBookViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull EBookViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
         holder.eBookName.setText(list.get(position).getPdfTitle());
 

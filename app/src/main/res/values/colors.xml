@@ -7,6 +7,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="cardColor">#FFFFFFFF</color>
+    <color name="branchColor">#CBCDCB</color>
+    <color name="facultyCardColor">#EFEEEE</color>
 
     <color name="textColor">#3f3b3b</color>
     <color name="titleColor">#1b272c</color>

@@ -122,16 +122,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(new Intent(this, EBookActivity.class));
                 break;
             case R.id.navigation_theme:
-                Toast.makeText(this, "Theme", Toast.LENGTH_SHORT).show();
+                showDialog(); // call for Change Theme
                 break;
             case R.id.navigation_website:
                 Toast.makeText(this, "Website", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.navigation_share:
                 Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.navigation_color:
-                showDialog();
                 break;
         }
         return true;

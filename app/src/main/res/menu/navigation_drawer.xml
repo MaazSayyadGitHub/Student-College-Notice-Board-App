@@ -11,7 +11,7 @@
 
     <item android:id="@+id/navigation_theme"
         android:title="Themes"
-        android:icon="@drawable/ic_theme"/>
+        android:icon="@drawable/ic_color"/>
 
     <item android:id="@+id/navigation_website"
         android:title="Website"
@@ -24,10 +24,6 @@
     <item android:id="@+id/navigation_rate"
         android:title="Rating"
         android:icon="@drawable/ic_rate"/>
-
-    <item android:id="@+id/navigation_color"
-        android:title="Color Theme"
-        android:icon="@drawable/ic_color"/>
 
     <item android:id="@+id/navigation_dev"
         android:title="Developer"
