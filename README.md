@@ -6,7 +6,7 @@
 #### Beutifull Home Design with Bottom Navigations And Navigation Drawers.
 #### In This Student App Student can Login/Sign Up, See Updated/Recents Notices, with Title, Date And Times.
 #### Can See Faculties Professors with Contact Information.
-#### Can See Full Gallery For Festive Images And Memories.
+#### Can See Full Gallery For Festive Images And Memories with Zoom Image Feature.
 #### About Section Of College.
 #### Sign In, Sign Up.
 #### Can See PDFs For Reading/ Downloading.
