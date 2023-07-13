@@ -15,36 +15,45 @@
 
 ## SCREENSHOTS
 
-### Home & Notice (ADD NOTICES)
+### Home & Navigations
 <div>
-  <img src="https://github.com/MaazSayyadGitHub/Admin-College-Notice-Board-App/assets/116147402/aa4ff2a8-32b3-44d7-9ace-e428efd62887.png" alt="dashboard" height="500dp">
-  <img src="https://github.com/MaazSayyadGitHub/Admin-College-Notice-Board-App/assets/116147402/2e6803b8-66f1-453c-8a67-896e5e77550d.png" height="500dp">
+  <img src="https://github.com/MaazSayyadGitHub/Student-College-Notice-Board-App/assets/116147402/5a73246f-8435-4ef8-9ef6-93c023b1bb0b.png" alt="dashboard" height="500dp">
+  <img src="https://github.com/MaazSayyadGitHub/Student-College-Notice-Board-App/assets/116147402/fd778f48-ed43-47de-90ea-bc5e743a2fda.png" height="500dp">
 </div>
 
-### Images - (Add Images According To Festival)
+### Notices Activity
 <div>
-  <img src="https://github.com/MaazSayyadGitHub/Admin-College-Notice-Board-App/assets/116147402/66052fb0-1da9-4030-9bd0-50655aebbd96.png" alt="dashboard" height="500dp">
+  <img src="https://github.com/MaazSayyadGitHub/Student-College-Notice-Board-App/assets/116147402/ae665b5c-5b86-4c9a-ac20-a1389d7aa987.png" alt="dashboard" height="500dp">
   
-  <img src="https://github.com/MaazSayyadGitHub/Admin-College-Notice-Board-App/assets/116147402/d31509a0-f25c-4bd4-9dbb-1555f69340ec.png" alt="dashboard" height="500dp">
+  <img src="https://github.com/MaazSayyadGitHub/Student-College-Notice-Board-App/assets/116147402/d203f081-3713-4096-a02c-3c2d16540dad.png" alt="dashboard" height="500dp">
 </div>
 
-### Faculties - (ADD/UPDATE/DELTE)
+### Faculties
 <div>
-     <img src="https://github.com/MaazSayyadGitHub/Admin-College-Notice-Board-App/assets/116147402/467c6a23-c7b3-4026-a2ad-6f33d7b1b491.png" alt="dashboard" height="500dp">
-
-<img src="https://github.com/MaazSayyadGitHub/Admin-College-Notice-Board-App/assets/116147402/34d66f93-833c-41d9-b3a2-8faed664e753.png" alt="dashboard" height="500dp">
-
-<img src="https://github.com/MaazSayyadGitHub/Admin-College-Notice-Board-App/assets/116147402/8d73c31c-9a30-40a0-9087-edf971e4fc70.png" alt="dashboard" height="500dp">
-
+     <img src="https://github.com/MaazSayyadGitHub/Student-College-Notice-Board-App/assets/116147402/d0ba544a-0de4-4740-a98e-540b061bf132.png" alt="dashboard" height="500dp">
 </div>
 
-### PDFs - (ADD PDF/DOCS/TEXTs)
+### Gallery & Zoom Images
 <div>
-  <img src="https://github.com/MaazSayyadGitHub/Admin-College-Notice-Board-App/assets/116147402/941b2c0c-21da-4172-8a0c-c03bf40d4292.png" alt="dashboard" height="500dp">
+  <img src="https://github.com/MaazSayyadGitHub/Student-College-Notice-Board-App/assets/116147402/c681dcbe-09b1-4b6a-bda5-a038442264c0.png" alt="dashboard" height="500dp">
+  <img src="https://github.com/MaazSayyadGitHub/Student-College-Notice-Board-App/assets/116147402/5710b2d5-d5d0-4584-8620-dca3be3b9d7e.png" alt="dashboard" height="500dp">
 </div>
 
-### Delete Notice
+### About Section
 <div>
-     <img src="https://github.com/MaazSayyadGitHub/Admin-College-Notice-Board-App/assets/116147402/053211c7-53e8-4464-ae8b-91aabebb917d.png" alt="dashboard" height="500dp">
+     <img src="https://github.com/MaazSayyadGitHub/Student-College-Notice-Board-App/assets/116147402/828dabbe-d91c-4c56-8cab-9ff998ba8b9a.png" alt="dashboard" height="500dp">
+  <img src="https://github.com/MaazSayyadGitHub/Student-College-Notice-Board-App/assets/116147402/e22fc694-74a5-4564-ae48-ae6335c3c175.png" alt="dashboard" height="500dp">
+</div>
+
+### EBooks & Books/PDF Reading
+<div>
+     <img src="https://github.com/MaazSayyadGitHub/Student-College-Notice-Board-App/assets/116147402/f942e365-05f5-46b3-b2c3-71d2735d0356.png" alt="dashboard" height="500dp">
+  <img src="https://github.com/MaazSayyadGitHub/Student-College-Notice-Board-App/assets/116147402/ad2ab5b1-6663-4efc-9060-67e3d392a76b.png" alt="dashboard" height="500dp">
+</div>
+
+### Themes & Dark Themes
+<div>
+     <img src="https://github.com/MaazSayyadGitHub/Student-College-Notice-Board-App/assets/116147402/62eeea7c-f3a7-4b24-968c-3fcd4bf893ef.png" alt="dashboard" height="500dp">
+  <img src="https://github.com/MaazSayyadGitHub/Student-College-Notice-Board-App/assets/116147402/74ce6b02-3060-4b20-8176-5c579293bd7b.png" alt="dashboard" height="500dp">
 </div>
 
