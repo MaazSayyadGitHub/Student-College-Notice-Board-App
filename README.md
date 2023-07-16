@@ -8,7 +8,7 @@
 #### Can See Faculties Professors with Contact Information.
 #### Can See Full Gallery For Festive Images And Memories with Zoom Image Feature.
 #### About Section Of College.
-#### Sign In, Sign Up.
+#### Sign In, Sign Up, Forget Password.
 #### Can See PDFs For Reading/ Downloading.
 #### Themes, Video Lectures, 
 #### This App is made with ( JAVA, Firebase Realtime Database, Xml, Material Design )
