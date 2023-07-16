@@ -19,6 +19,7 @@ import com.maaz.collegeapp.R;
 public class LoginActivity extends AppCompatActivity {
 
     private EditText email, pass;
+    private TextView openForgetPass;
     private String Email, Pass;
 
     private FirebaseAuth auth;
@@ -30,7 +31,10 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        getSupportActionBar().hide();
+
         TextView openReg = findViewById(R.id.openReg);
+        openForgetPass = findViewById(R.id.openForgetPass);
         email = findViewById(R.id.logEmail);
         pass = findViewById(R.id.logPass);
         Button logBtn = findViewById(R.id.logBtn);
@@ -43,11 +47,16 @@ public class LoginActivity extends AppCompatActivity {
 
         // we can do like this also (lambda Expression)
         // logBtn.setOnClickListener(v -> validateData());
-
-
+        
         openReg.setOnClickListener(v -> OpenRegisterActivity());
 
+        openForgetPass.setOnClickListener(v -> OpenForgetPasswordActivity());
 
+    }
+
+    private void OpenForgetPasswordActivity() {
+        startActivity(new Intent(this, ForgotPassActivity.class));
+        // finish();
     }
 
     @Override
