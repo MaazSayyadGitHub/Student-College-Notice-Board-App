@@ -16,12 +16,16 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Display;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.maaz.collegeapp.Auth.LoginActivity;
 import com.maaz.collegeapp.EBooks.EBookActivity;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -29,7 +33,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     /* Pushing Or Enabling Project with Github :-
 
-     first Goto Project section
+     first Goto VCS enable git.
+     then Goto Project section
      and then go to Git
      then do first add+ to VCS
      then after commit directory
@@ -54,10 +59,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private String selected;
     private final String CHECKED_ITEM = "checked_item"; // to access SP.
 
+    private FirebaseAuth auth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        auth = FirebaseAuth.getInstance();
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         drawerLayout = findViewById(R.id.drawerLayout);
@@ -96,13 +105,34 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
+    // this is for option menu
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.option_menu, menu);
+
+        return true;
+    }
+
     // this is for toggle click... toggle is three line on navigation Drawer.
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        // navigation toggle code
         if (toggle.onOptionsItemSelected(item)) {
             return true;
         }
+        // logout code
+        if (item.getItemId() == R.id.logout){
+            auth.signOut();
+            OpenLoginActivity();
+        }
+
         return true;
+    }
+
+    private void OpenLoginActivity() {
+        startActivity(new Intent(this, LoginActivity.class));
+        finish();
     }
 
     @Override
@@ -188,10 +218,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
+
+    // set and get Checked Items For Themes
     private int getCheckedItem(){
         return sharedPreferences.getInt(CHECKED_ITEM, 0);
     }
-
     private void setCheckedItem(int i){
         editor.putInt(CHECKED_ITEM, i);
         editor.apply();
@@ -213,4 +244,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void setActionBarTitle(String title) {
         getSupportActionBar().setTitle(title);
     }
+
+
 }
