@@ -10,7 +10,7 @@
 #### About Section Of College.
 #### Push Notification (FCM)
 #### Sign In, Sign Up, Forget Password, And LogOut.
-#### Can See PDFs For Reading/ Downloading.
+#### Can See PDFs For Reading/Downloading with Search Bar.
 #### Themes, Video Lectures, 
 #### This App is made with ( JAVA, Firebase Realtime Database, Xml, Material Design )
 
