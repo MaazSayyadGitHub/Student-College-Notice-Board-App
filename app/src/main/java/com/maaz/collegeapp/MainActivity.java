@@ -25,6 +25,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.maaz.collegeapp.Auth.LoginActivity;
 import com.maaz.collegeapp.EBooks.EBookActivity;
 
@@ -65,6 +66,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Push Notification from Firebase
+        FirebaseMessaging.getInstance().subscribeToTopic("notification"); // it is used to target specific user.
 
         auth = FirebaseAuth.getInstance();
 

@@ -6,6 +6,8 @@
     <color name="cardColor">#4f4f4f</color>
     <color name="branchColor">#4f4f4f</color>
 
+    <color name="black">#FF000000</color>
+
     <color name="facultyCardColor">#4f4f4f</color>
 
     <color name="purple_700">#3f3b3b</color>

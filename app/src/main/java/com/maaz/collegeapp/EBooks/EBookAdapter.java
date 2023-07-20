@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.maaz.collegeapp.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class EBookAdapter extends RecyclerView.Adapter<EBookAdapter.EBookViewHolder> {
@@ -67,6 +68,12 @@ public class EBookAdapter extends RecyclerView.Adapter<EBookAdapter.EBookViewHol
     @Override
     public int getItemCount() {
         return list.size();
+    }
+
+    // this filter is using for search fun.
+    public void FilteredList(ArrayList<EBookData> filterList) {
+        list = filterList;
+        notifyDataSetChanged();
     }
 
     public class EBookViewHolder extends RecyclerView.ViewHolder {

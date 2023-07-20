@@ -6,7 +6,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -31,6 +34,8 @@ public class EBookActivity extends AppCompatActivity {
     private ShimmerFrameLayout shimmerFrameLayout;
     private LinearLayout shimmerLayout;
 
+    // search
+    EditText editTextSearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +49,8 @@ public class EBookActivity extends AppCompatActivity {
         shimmerLayout = findViewById(R.id.shimmerLayout);
 
         EBookRecyclerView = findViewById(R.id.EBookRecyclerView);
+
+        editTextSearch = findViewById(R.id.search_bar);
 
         reference = FirebaseDatabase.getInstance().getReference().child("pdf");
 
@@ -74,6 +81,8 @@ public class EBookActivity extends AppCompatActivity {
                 shimmerFrameLayout.stopShimmer();
                 shimmerLayout.setVisibility(View.GONE);
 
+                // set visibility Visible after loaded data
+                editTextSearch.setVisibility(View.VISIBLE);
 
             }
 
@@ -82,6 +91,39 @@ public class EBookActivity extends AppCompatActivity {
                 Toast.makeText(EBookActivity.this, error.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
+
+        // search Functionality
+        editTextSearch.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                filterData(s.toString()); // pass this editable
+            }
+        });
+
+    }
+
+    private void filterData(String text) {
+        ArrayList<EBookData> filterList = new ArrayList<>();
+
+        for (EBookData item : list){ // list is ebook list.
+
+            // if both is matching which is pdfTitle text and text which is we have passed in search bar
+            if (item.getPdfTitle().toLowerCase().contains(text.toLowerCase())){
+                filterList.add(item); // so add this matching item to this list.
+            }
+        }
+
+        adapter.FilteredList(filterList);
     }
 
     // we are starting shimmer layout in Resume Mode and Stopping in Pause Mode.
