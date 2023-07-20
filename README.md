@@ -16,6 +16,20 @@
 
 ## SCREENSHOTS
 
+
+
+
+
+
+### SignIn/SignUp & Forget & Logout.
+<div>
+  <img src="https://github.com/MaazSayyadGitHub/Student-College-Notice-Board-App/assets/116147402/92534146-7de5-4ad8-90ab-6ef5df16f8b1.png" alt="dashboard" height="500dp">
+  
+  <img src="https://github.com/MaazSayyadGitHub/Student-College-Notice-Board-App/assets/116147402/d4f3611d-eb8d-4643-99d9-25a3000bff38.png" height="500dp">
+  
+  <img src="https://github.com/MaazSayyadGitHub/Student-College-Notice-Board-App/assets/116147402/27136696-b228-418e-8482-262f1d910f9e.png" height="500dp">
+</div>
+
 ### Home & Navigations
 <div>
   <img src="https://github.com/MaazSayyadGitHub/Student-College-Notice-Board-App/assets/116147402/5a73246f-8435-4ef8-9ef6-93c023b1bb0b.png" alt="dashboard" height="500dp">
@@ -48,7 +62,7 @@
 
 ### EBooks & Books/PDF Reading
 <div>
-     <img src="https://github.com/MaazSayyadGitHub/Student-College-Notice-Board-App/assets/116147402/f942e365-05f5-46b3-b2c3-71d2735d0356.png" alt="dashboard" height="500dp">
+     <img src="https://github.com/MaazSayyadGitHub/Student-College-Notice-Board-App/assets/116147402/13c391bd-d102-4be0-a7ee-69944988c4fa.png" alt="dashboard" height="500dp">
   <img src="https://github.com/MaazSayyadGitHub/Student-College-Notice-Board-App/assets/116147402/ad2ab5b1-6663-4efc-9060-67e3d392a76b.png" alt="dashboard" height="500dp">
 </div>
 
