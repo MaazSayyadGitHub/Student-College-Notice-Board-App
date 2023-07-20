@@ -8,8 +8,9 @@
 #### Can See Faculties Professors with Contact Information.
 #### Can See Full Gallery For Festive Images And Memories with Zoom Image Feature.
 #### About Section Of College.
-#### Sign In, Sign Up.
-#### Can See PDFs For Reading/ Downloading.
+#### Push Notification (FCM)
+#### Sign In, Sign Up, Forget Password, And LogOut.
+#### Can See PDFs For Reading/Downloading with Search Bar.
 #### Themes, Video Lectures, 
 #### This App is made with ( JAVA, Firebase Realtime Database, Xml, Material Design )
 
